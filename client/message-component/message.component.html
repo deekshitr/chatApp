@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Message page</title>
+  </head>
+  <body >
+    <div>
+      <div class="main">
+        <div class="firstSubChild contain">
+          <div class="header">
+            <h2>Messages</h2>
+            <div class="chat-box">
+              <div class="message-box">
+                <div>
+                  <ul id="messages" class="message"></ul>
+                </div>
+                <div class="enter-message">
+                  <input id="message-boxID" type="text" [(ngModel)]="message" placeholder="enter message.." required>
+                  <button (click)="sendMessage(message)">Send</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="secondSubChild">
+          <div class=user-alert>
+            <div id="newUserID" *ngIf="newUser">
+              {{newUserName}} has joined!!!
+            </div>
+            <div id="leftUserID" *ngIf="exitedUser">
+              {{exitedUserName}} left from the chat!!!
+            </div>
+          </div>
+          <div class="caption">
+            <h2>Users connected</h2>
+          </div>
+          <div class="user-list">
+            <ul class="user-list-ul">
+                <li *ngFor="let name of clientsNameList" class="user-list__item">
+                  <div>
+                    <input class="check-box" type="checkbox" [checked]="true" disabled>
+                      </div>
+                    <div class="user-list__content">
+                          <div class="user-list__name">
+                            <div class="text text_size_m">{{name}}</div>
+                        </div>
+                      </div>                
+                  </li>
+              </ul>
+          </div>
+          <div id="resID" *ngIf="resFlag">
+            this is the server response : {{response}}
+          </div>     
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

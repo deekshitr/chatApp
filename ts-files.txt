@@ -1,0 +1,12 @@
+./client/message-component/message.component.ts
+./client/message-component/message.module.ts
+./client/message-component/message.route.ts
+./client/service/global.ts
+./client/service/http.service.ts
+./client/user-component/user.component.ts
+./client/user-component/user.module.ts
+./client/user-component/user.route.ts
+./client/app.component.ts
+./client/app.module.ts
+./client/app.routing.ts
+./client/main.ts

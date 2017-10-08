@@ -1,0 +1,9 @@
+<div id="textbox-chat-header">
+	<h2>
+	    Enter your name:
+	</h2>
+</div>
+<div id="name">
+	<input type="text" [(ngModel)]="user.name" placeholder="please enter your name" name="username" required>
+	<button (click)="submit(user)">Submit</button>
+</div>
